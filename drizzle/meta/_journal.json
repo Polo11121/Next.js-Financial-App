@@ -1,0 +1,27 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1717864184036,
+      "tag": "0000_clever_wong",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1717864908103,
+      "tag": "0001_wooden_liz_osborn",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1717864973098,
+      "tag": "0002_black_cable",
+      "breakpoints": true
+    }
+  ]
+}
