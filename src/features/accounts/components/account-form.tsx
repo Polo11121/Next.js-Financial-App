@@ -44,8 +44,12 @@ export const AccountForm = ({
   });
 
   const submitHandler = (values: FormValues) => onSubmit(values);
-
   const deleteHandler = () => onDelete?.();
+
+  const isDisabled =
+    disabled ||
+    !form.getValues().name ||
+    form.getValues().name === defaultValues?.name;
 
   return (
     <Form {...form}>
@@ -69,7 +73,7 @@ export const AccountForm = ({
             </FormItem>
           )}
         />
-        <Button className="w-full" disabled={disabled}>
+        <Button className="w-full" disabled={isDisabled}>
           {id ? "Save Changes" : "Create account"}
         </Button>
         {!!id && (

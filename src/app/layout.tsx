@@ -1,6 +1,6 @@
 import { PropsWithChildren } from "react";
 import { QueryProvider } from "@/providers/query-provider";
-import { SheetProvider } from "@/providers/sheet-provider";
+import { SheetsProvider } from "@/providers/sheets-provider";
 import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -19,7 +19,7 @@ const RootLayout = ({ children }: Readonly<PropsWithChildren>) => (
     <html lang="en">
       <body className={inter.className}>
         <QueryProvider>
-          <SheetProvider />
+          <SheetsProvider />
           <Toaster />
           {children}
         </QueryProvider>

@@ -26,7 +26,6 @@ export const NewAccountSheet = () => {
   }));
   const { mutate, isPending } = useCreateAccount();
 
-  console.log(isOpen);
   const submitHandler = (values: FormValues) =>
     mutate(values, {
       onSuccess: () => onClose(),

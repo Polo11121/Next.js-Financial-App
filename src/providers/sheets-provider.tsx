@@ -2,13 +2,19 @@
 
 import { useEffect, useState } from "react";
 import { NewAccountSheet } from "@/features/accounts/components/new-account-sheet";
+import { EditAccountSheet } from "@/features/accounts/components/edit-account-sheet";
 
-export const SheetProvider = () => {
+export const SheetsProvider = () => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
 
-  return isMounted ? <NewAccountSheet /> : null;
+  return isMounted ? (
+    <>
+      <EditAccountSheet />
+      <NewAccountSheet />
+    </>
+  ) : null;
 };
