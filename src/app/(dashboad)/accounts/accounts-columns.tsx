@@ -6,14 +6,14 @@ import { client } from "@/lib/hono";
 import { ColumnDef } from "@tanstack/react-table";
 import { InferResponseType } from "hono";
 import { ArrowUpDown } from "lucide-react";
-import { Actions } from "./actions";
+import { AccountActions } from "@/app/(dashboad)/accounts/account-actions";
 
 export type AccountsResponseType = InferResponseType<
   typeof client.api.accounts.$get,
   200
 >["data"][0];
 
-export const columns: ColumnDef<AccountsResponseType>[] = [
+export const accountsColumns: ColumnDef<AccountsResponseType>[] = [
   {
     id: "select",
     header: ({ table }) => (
@@ -50,6 +50,6 @@ export const columns: ColumnDef<AccountsResponseType>[] = [
   },
   {
     id: "actions",
-    cell: ({ row }) => <Actions id={row.original.id} />,
+    cell: ({ row }) => <AccountActions id={row.original.id} />,
   },
 ];

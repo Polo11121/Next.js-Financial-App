@@ -1,0 +1,1 @@
+ALTER TABLE "categoreis" RENAME TO "categories";

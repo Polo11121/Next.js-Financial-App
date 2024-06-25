@@ -16,7 +16,7 @@ type ActionsProps = {
   id: string;
 };
 
-export const Actions = ({ id }: ActionsProps) => {
+export const AccountActions = ({ id }: ActionsProps) => {
   const { onOpen } = useOpenAccount((state) => ({
     onOpen: state.onOpen,
   }));

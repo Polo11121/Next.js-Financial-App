@@ -32,6 +32,7 @@ interface DataTableProps<TData, TValue> {
   data: TData[];
   filterKey: string;
   onDelete: (rows: Row<TData>[]) => void;
+  deletePrefix: string;
   disabled?: boolean;
   isLoading?: boolean;
 }
@@ -42,6 +43,7 @@ export function DataTable<TData, TValue>({
   filterKey,
   onDelete,
   disabled,
+  deletePrefix,
   isLoading,
 }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = useState<SortingState>([]);
@@ -49,7 +51,7 @@ export function DataTable<TData, TValue>({
   const [rowSelection, setRowSelection] = useState({});
   const [ConfirmationDialog, confirm] = useConfirm(
     "Are you sure?",
-    "You are about to delete the selected accounts."
+    `You are about to delete the selected ${deletePrefix}.`
   );
   const table = useReactTable({
     data,

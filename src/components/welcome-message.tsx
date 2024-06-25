@@ -17,3 +17,10 @@ export const WelcomeMessage = () => {
     </div>
   );
 };
+
+enum ButtonVariant {
+  Primary,
+  Outline,
+}
+
+const getOne = (a: number, b: number) => a + b;
