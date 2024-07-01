@@ -26,6 +26,9 @@ export const useDeleteCategory = (id?: string) => {
       queryClient.removeQueries({
         queryKey: ["categories", id],
       });
+      queryClient.removeQueries({
+        queryKey: ["transactions"],
+      });
     },
     onError: () => {
       toast.error("Failed to delete category");

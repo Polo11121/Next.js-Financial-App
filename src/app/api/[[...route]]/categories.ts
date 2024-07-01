@@ -81,7 +81,7 @@ export const categories = new Hono()
       if (!data) {
         return c.json(
           {
-            message: "Account not found",
+            message: "Category not found",
           },
           404
         );
@@ -131,7 +131,7 @@ export const categories = new Hono()
       if (!data) {
         return c.json(
           {
-            message: "Account not found",
+            message: "Category not found",
           },
           404
         );
@@ -245,7 +245,7 @@ export const categories = new Hono()
       if (!data) {
         return c.json(
           {
-            message: "Account not found",
+            message: "Category not found",
           },
           404
         );

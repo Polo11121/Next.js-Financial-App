@@ -70,6 +70,14 @@ export function DataTable<TData, TValue>({
     },
   });
 
+  const deleteHandler = async () => {
+    const ok = await confirm();
+
+    if (ok) {
+      onDelete?.(table.getFilteredSelectedRowModel().rows);
+      setRowSelection({});
+    }
+  };
   return (
     <div className="px-6 space-y-6 pb-6">
       <ConfirmationDialog disabled={disabled} />
@@ -91,13 +99,7 @@ export function DataTable<TData, TValue>({
             variant="outline"
             size="sm"
             className="ml-auto font-normal text-xs"
-            onClick={async () => {
-              const ok = await confirm();
-
-              if (ok) {
-                onDelete?.(table.getFilteredSelectedRowModel().rows);
-              }
-            }}
+            onClick={deleteHandler}
           >
             <Trash className="size-4 mr-2" />
             Delete {table.getFilteredSelectedRowModel().rows.length} selected
