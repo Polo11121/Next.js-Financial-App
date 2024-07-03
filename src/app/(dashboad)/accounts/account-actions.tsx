@@ -10,7 +10,7 @@ import {
 import { useDeleteAccount } from "@/features/accounts/api/use-delete-account";
 import { useOpenAccount } from "@/features/accounts/hooks/use-open-account";
 import { Edit, MoreHorizontal, Trash } from "lucide-react";
-import { useConfirm } from "@/hooks/useConfirm";
+import { useConfirm } from "@/hooks/use-confirm";
 
 type ActionsProps = {
   id: string;

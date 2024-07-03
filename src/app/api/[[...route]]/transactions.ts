@@ -258,7 +258,6 @@ export const transactions = new Hono()
           401
         );
       }
-
       const data = await db
         .insert(transactionsSchema)
         .values(

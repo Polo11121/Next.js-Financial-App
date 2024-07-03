@@ -8,7 +8,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Edit, MoreHorizontal, Trash } from "lucide-react";
-import { useConfirm } from "@/hooks/useConfirm";
+import { useConfirm } from "@/hooks/use-confirm";
 import { useDeleteTransaction } from "@/features/transactions/api/use-delete-transaction";
 import { useOpenTransaction } from "@/features/transactions/hooks/use-open-transcation";
 

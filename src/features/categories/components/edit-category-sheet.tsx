@@ -7,7 +7,7 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
-import { useConfirm } from "@/hooks/useConfirm";
+import { useConfirm } from "@/hooks/use-confirm";
 import { Loader2 } from "lucide-react";
 import { z } from "zod";
 import { useOpenCategory } from "@/features/categories/hooks/use-open-category";

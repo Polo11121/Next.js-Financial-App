@@ -13,7 +13,7 @@ import { useGetAccount } from "@/features/accounts/api/use-get-account";
 import { useEditAccount } from "@/features/accounts/api/use-edit-account";
 import { useDeleteAccount } from "@/features/accounts/api/use-delete-account";
 import { insertAccountSchema } from "@/db/schema";
-import { useConfirm } from "@/hooks/useConfirm";
+import { useConfirm } from "@/hooks/use-confirm";
 import { Loader2 } from "lucide-react";
 import { z } from "zod";
 

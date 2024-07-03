@@ -25,7 +25,7 @@ import {
 } from "@/components/ui/table";
 import { Trash } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
-import { useConfirm } from "@/hooks/useConfirm";
+import { useConfirm } from "@/hooks/use-confirm";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
